@@ -64,7 +64,7 @@
         {
             for (int i = 0; i < Bekertszamok.Length; i++)
             {
-                Console.Write("Kérek egy számot: ");
+                Console.Write($"Kérem a {i+1}. egy számot: ");
                 Bekertszamok[i] = Convert.ToInt32(Console.ReadLine());
                 
             }
@@ -96,15 +96,23 @@
             Console.Write("Adj egy szamot 1 es 5 kozott: ");
 
             int bekertszam = Convert.ToInt32(Console.ReadLine());
-            for (int i = 0; i < Bekertszamok.Length; i++)
-            {
-                if (Bekertszamok[i] == bekertszam)
-                {
-                    Console.WriteLine($"A {bekertszam} a {i + 1}. helyen van.");
-                }
-            }
+
         }
 
+
+
+        static void F14_feltoltes()
+        {
+            Console.Write("Add meg hany elemu legyen a lista: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int[] elemek = new int[N];
+
+            for (int i = 0; i < elemek.Length; i++)
+            {
+                Console.Write("Kérek egy számot: ");
+                elemek[i] = Convert.ToInt32(Console.ReadLine());
+            }
+        }
 
 
 
@@ -117,6 +125,7 @@
             F02_Kiiratas();
             F05_feltoltes();
             F05_Kiiratas();
+            F14_feltoltes();
         }
     }
 }
